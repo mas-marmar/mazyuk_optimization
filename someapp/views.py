@@ -1,10 +1,7 @@
 from django.shortcuts import render, aget_list_or_404
-from django.http import HttpResponse
-from django.views.generic import ListView
 from .models import Product, Manufacturer
 from asyncio import create_task
 
-from asyncio import create_task
 
 async def my_view(request):
     products_task = create_task(aget_list_or_404(Product))

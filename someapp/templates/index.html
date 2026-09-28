@@ -6,23 +6,18 @@
 </head>
 <body>
     <h1>Товары</h1>
-   <ul>
-    {% for product in products %}
-        <li>
-            {{ product.name }} — {{ product.price }} ₽
-            ({{ product.manufacturer.name }}, {{ product.manufacturer.country }})
-        </li>
-    {% empty %}
-        <li>Товаров нет</li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ product.name }} - {{ product.price }} ₽
+            </li>
+        {% endfor %}
+    </ul>
 
     <h1>Производители</h1>
     <ul>
         {% for m in manufacturers %}
-            <li>{{ m.name }} — {{ m.country }}</li>
-        {% empty %}
-            <li>Производителей нет</li>
+            <li>{{ m.name }} - {{ m.country }}</li>
         {% endfor %}
     </ul>
 </body>
